@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.woods</groupId>
+    <artifactId>sparkstreaming</artifactId>
+    <version>1.0</version>
+
+    <properties>
+        <scala.version>2.10.5</scala.version>
+        <kafka.version>0.10.1.1</kafka.version>
+        <spark.version>1.6.3</spark.version>
+        <hadoop.version>2.7.1</hadoop.version>
+        <hbase.version>1.1.2</hbase.version>
+        <jdbc.version>5.0.5</jdbc.version>
+        <spark.scala.version>2.10</spark.scala.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.woods</groupId>
+            <artifactId>mpp-connector-java</artifactId>
+            <version>8.3.81.51</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/lib/mpp-connector-java-8.3.81.51-build-53.2-bin.jar</systemPath>
+        </dependency>
+
+
+        <!--<dependency>-->
+        <!--<groupId>mysql</groupId>-->
+        <!--<artifactId>mysql-connector-java</artifactId>-->
+        <!--<version>${jdbc.version}</version>-->
+        <!--</dependency>-->
+
+
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>org.apache.spark</groupId>-->
+        <!--<artifactId>spark-streaming_${spark.scala.version}</artifactId>-->
+        <!--<version>${spark.version}</version>-->
+        <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-hive -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-hive_${spark.scala.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_${spark.scala.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_${spark.scala.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_${spark.scala.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming-kafka-0-10_${spark.scala.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+        <sourceDirectory>src/main/scala</sourceDirectory>
+        <testSourceDirectory>src/test/scala</testSourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.scala-tools</groupId>
+                <artifactId>maven-scala-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <scalaVersion>${scala.version}</scalaVersion>
+                    <args>
+                        <arg>-target:jvm-1.8</arg>
+                    </args>
+                </configuration>
+            </plugin>
+            <!--<plugin>-->
+            <!--<groupId>org.apache.maven.plugins</groupId>-->
+            <!--<artifactId>maven-eclipse-plugin</artifactId>-->
+            <!--<configuration>-->
+            <!--<downloadSources>true</downloadSources>-->
+            <!--<buildcommands>-->
+            <!--<buildcommand>ch.epfl.lamp.sdt.core.scalabuilder</buildcommand>-->
+            <!--</buildcommands>-->
+            <!--<additionalProjectnatures>-->
+            <!--<projectnature>ch.epfl.lamp.sdt.core.scalanature</projectnature>-->
+            <!--</additionalProjectnatures>-->
+            <!--<classpathContainers>-->
+            <!--<classpathContainer>org.eclipse.jdt.launching.JRE_CONTAINER</classpathContainer>-->
+            <!--<classpathContainer>ch.epfl.lamp.sdt.launching.SCALA_CONTAINER</classpathContainer>-->
+            <!--</classpathContainers>-->
+            <!--</configuration>-->
+            <!--</plugin>-->
+        </plugins>
+    </build>
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.scala-tools</groupId>
+                <artifactId>maven-scala-plugin</artifactId>
+                <configuration>
+                    <scalaVersion>${scala.version}</scalaVersion>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+</project>

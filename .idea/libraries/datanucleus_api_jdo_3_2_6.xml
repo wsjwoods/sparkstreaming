@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="datanucleus-api-jdo-3.2.6">
+    <CLASSES>
+      <root url="jar://E:/spark/lib/datanucleus-api-jdo-3.2.6.jar!/" />
+      <root url="jar://E:/spark/lib/datanucleus-core-3.2.10.jar!/" />
+      <root url="jar://E:/spark/lib/datanucleus-rdbms-3.2.9.jar!/" />
+      <root url="jar://E:/spark/lib/fastjson-1.2.47.jar!/" />
+      <root url="jar://E:/spark/lib/mpp-connector-java-8.3.81.51-build-53.2-bin.jar!/" />
+      <root url="jar://E:/spark/lib/postgresql-9.3-1102-jdbc4.jar!/" />
+      <root url="jar://E:/spark/lib/spark-1.6.3-yarn-shuffle.jar!/" />
+      <root url="jar://E:/spark/lib/spark-assembly-1.6.3-hadoop2.7.1.jar!/" />
+      <root url="jar://E:/spark/lib/spark-csv_2.10-1.5.0.jar!/" />
+      <root url="jar://E:/spark/lib/spark-examples-1.6.3-hadoop2.7.1.jar!/" />
+      <root url="jar://E:/spark/lib/spark-hdp-assembly.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/spark/lib/mpp-connector-java-8.3.81.51-build-53.2-bin.jar!/" />
+      <root url="jar://E:/spark/lib/spark-1.6.3-yarn-shuffle.jar!/" />
+      <root url="jar://E:/spark/lib/spark-assembly-1.6.3-hadoop2.7.1.jar!/" />
+      <root url="jar://E:/spark/lib/spark-hdp-assembly.jar!/" />
+    </SOURCES>
+  </library>
+</component>

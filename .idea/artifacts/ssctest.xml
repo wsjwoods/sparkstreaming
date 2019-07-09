@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ssctest">
+    <output-path>$PROJECT_DIR$/out/artifacts/ssctest</output-path>
+    <root id="archive" name="ssctest.jar">
+      <element id="module-output" name="sparkstreaming" />
+    </root>
+  </artifact>
+</component>
